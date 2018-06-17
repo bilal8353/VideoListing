@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { HttpService } from '../common/http.service';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class SearchPanelService {
 
   constructor(private httpService: HttpService) { }
 
+  baseUrl = environment.baseUrl;
+
   public searchVideoList(params, cbSuccess, cbError) {
 
-    let url1 = `data/API/CONTENTLISTINGPAGE-PAGE1.json`;
-    let url2 = `data/API/CONTENTLISTINGPAGE-PAGE2.json`;
-    let url3 = `data/API/CONTENTLISTINGPAGE-PAGE3.json`;
+    let url1 = `${this.baseUrl}CONTENTLISTINGPAGE-PAGE1.json`;
+    let url2 = `${this.baseUrl}CONTENTLISTINGPAGE-PAGE2.json`;
+    let url3 = `${this.baseUrl}CONTENTLISTINGPAGE-PAGE3.json`;
 
     Observable.forkJoin(
       this.httpService.get(url1, params),
