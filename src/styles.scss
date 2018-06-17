@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "variables.scss";
+html,
+body {
+    height: 100%;
+    font-family: $montserrat-regular;
+    color: white;
+}
+
+html>body {
+    background-color: $background;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.text-trim {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.site-min-height {
+    min-height: 900px;
+}
+
+.site-content-wrapper {
+    display: inline-block;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 0px;
+    width: 100%;
+}
+
+.inline-block-middle {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.bottom-margin-sub {
+    margin-bottom: 5px;
+}
+
+.bottom-margin-lite {
+    margin-bottom: 10px;
+}
+
+.bottom-margin-medium {
+    margin-bottom: 15px;
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
+.text-form-section-container {
+    font-family: $montserrat-light;
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: grey;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: grey;
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: grey;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: grey;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    input,
+    textarea {
+        color: white;
+    }
+}
+
+img {
+    image-rendering: -moz-crisp-edges;
+    /* Firefox */
+    image-rendering: -o-crisp-edges;
+    /* Opera */
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE (non-standard property) */
+}
+
+input.styled-input,
+textarea.form-control {
+    background: transparent;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: solid 1px grey;
+    border-left: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+    padding-left: 8px;
+    width: 100%;
+    color: white;
+    &:focus {
+        box-shadow: none;
+        background: transparent;
+        color: white;
+    }
+}

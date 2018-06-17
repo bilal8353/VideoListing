@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.search-panel {
+    padding: 45px 15px 35px;
+    font-family: $montserrat-light;
+    .back-button:after {
+        background-image: url(../../assets/img/Back.png);
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        content: "";
+        position: absolute;
+        top: -30px;
+        cursor: pointer;
+    }
+}

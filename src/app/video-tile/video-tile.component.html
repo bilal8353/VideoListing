@@ -1,0 +1,18 @@
+<div class="row video-listing-page">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="row" *ngIf="videoList.length>0; else noDataSection">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 list-row" *ngFor="let tile of videoList; trackBy:name">
+        <div class="video-thumbnail">
+          <img class="img-fluid bottom-margin-lite" src="assets/img/{{tile['poster-image']}}" alt="Video Thumbnail" default="assets/img/placeholder_for_missing_posters_resize.png"
+          />
+          <div class="video-title text-trim">{{tile.name}}</div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noDataSection>
+    <div class="row no-data-found">
+      No Data
+    </div>
+    </ng-template>>
+  </div>
+</div>

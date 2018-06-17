@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+.video-listing-page {
+    font-family: $montserrat-light;
+    padding-bottom: 30px;
+    .no-data-found {
+        color: grey;
+        font-size: 20px;
+        font-family: $montserrat-semibold;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .list-row {
+        padding-top: 30px;
+        .video-thumbnail {
+            img {
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .video-title {
+                color: white;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .video-listing-page {
+        .list-row {
+            .video-thumbnail {
+                .video-title {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

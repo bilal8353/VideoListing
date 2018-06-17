@@ -1,0 +1,32 @@
+$background: black !default;
+
+$montserrat-black: 'Montserrat-Black' !default;
+$montserrat-bold: 'Montserrat-Bold' !default;
+$montserrat-light: 'Montserrat-Light' !default;
+$montserrat-regular: 'Montserrat-Regular' !default;
+$montserrat-semibold: 'Montserrat-SemiBold' !default;
+$montserrat-medium: 'Montserrat-Medium' !default;
+$font-path: "/assets/fonts" !default;
+/*Mixin for font faces*/
+
+@mixin font-faces($font-name, $font-path) {
+    @font-face {
+        font-family: $font-name; //        src: url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
+        src : url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@include font-faces($montserrat-black,
+$font-path);
+@include font-faces($montserrat-bold,
+$font-path);
+@include font-faces($montserrat-light,
+$font-path);
+@include font-faces($montserrat-regular,
+$font-path);
+@include font-faces($montserrat-semibold,
+$font-path);
+@include font-faces($montserrat-medium,
+$font-path);

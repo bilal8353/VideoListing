@@ -1,0 +1,9 @@
+<div infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="300" (scrolled)="getVideoDetails()">
+  <div class="row home-page">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="video-genre inline-block-middle">{{videoGenre}}</div>
+      <div class="search-icon inline-block-middle float-right" (click)="naviagteToSearch()"></div>
+    </div>
+  </div>
+  <video-tile [videoList]="videoList"></video-tile>
+</div>
