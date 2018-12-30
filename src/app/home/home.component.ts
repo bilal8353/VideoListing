@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   videoList = [];
 
   ngOnInit() {
-    this.getVideoDetails();
+        this.getVideoDetails();
   }
 
   ngAfterViewInit() {
@@ -43,6 +43,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
           this.busyLoadingData = false;
         });
     }
+  }
+
+  public naviagteToTable() {
+    this.router.navigate(['table']);
   }
 
   public naviagteToSearch() {

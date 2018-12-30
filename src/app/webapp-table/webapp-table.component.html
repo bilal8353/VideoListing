@@ -1,0 +1,24 @@
+<div class="webapp-table-container">
+    <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+                <th *ngFor="let item of headerData" class="pointer" (click)="sort(item.key)">
+                    {{item.title}}
+                    <i class="fa" [ngClass]="{'fa-sort': column != item.key,
+                     'fa-sort-asc': (column == item.key && isDesc),
+                      'fa-sort-desc': (column == item.key && !isDesc) }"
+                       aria-hidden="true"> </i>
+                  </th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of tableData | orderBy: {property: column, direction: direction};let index = index;">
+                  <td *ngFor="let header of headerData">
+                      {{item[header.key]}}
+                  </td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
